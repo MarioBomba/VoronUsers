@@ -1,0 +1,3 @@
+G32
+G28 Z
+M98 P"/macros/print_scripts/goto_bed_center.g"
