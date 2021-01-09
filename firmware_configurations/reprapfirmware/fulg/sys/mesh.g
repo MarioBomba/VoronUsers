@@ -26,7 +26,7 @@ G28 Z
 
 ; Get the reference Z offset
 M98 P"/macros/print_scripts/goto_bed_center.g"
-G29 S-3
+G30 S-3
 
 ; Probe a new bed mesh!
 M291 P"Probing now!" R"Bed Mesh" T5

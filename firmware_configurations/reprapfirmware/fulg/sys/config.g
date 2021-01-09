@@ -95,7 +95,7 @@ M308 S5 Y"drivers-duex" A"Duex Drivers"
 M558 K0 P8 C"^zprobe.in" T18000 F120 H5 A5 S0.01 R0.2
 G31 K0 P500 X0 Y25 Z2.0              ; Don't really care about inductive probe Z offset
 M558 K1 P8 C"^zstop" T18000 F60 H2 A10 S0.005 R0.2
-G31 K1 P500 X0 Y0 Z-0.18             ; Z switch offset (if positive, greater value = lower nozzle. if negative, more negative = higher nozzle)
+G31 K1 P500 X0 Y0 Z0.32             ; Z switch offset (if positive, greater value = lower nozzle. if negative, more negative = higher nozzle)
 
 ; Fans
 M950 F0 C"fan0" Q250                ; Create fan 0 (hotend) on pin fan0 and set its frequency
