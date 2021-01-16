@@ -3,7 +3,7 @@ M291 P"This will replace the existing bed mesh. Are you sure?" R"Bed Mesh" S3
 
 ; Level the gantry so we can park the carriage in the middle of the bed
 G32
-M98 P"/print_scripts/goto_bed_center.g"
+M98 P"/macros/print_scripts/goto_bed_center.g"
 
 ; Heat the bed to 100C
 M291 P"Heating up the bed..." R"Probing New Bed Mesh" T5
