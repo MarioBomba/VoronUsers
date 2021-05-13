@@ -5,14 +5,14 @@
 ; Written by Jadon Miller - 2/27/2019
 ; Partially adapted from the work of tinkerlifeprojects on Github.
 ;
-; File "main"
+; File "altMain"
 ;
-; This is the file for the overview screen of the menu system.
-; On the top of the screen we have a menu that updates based
-; on the print status. In the middle we show the temperatures and fan
-; speeds, and the bottom shows the percentage complete and time left according
-; to filament usage, or the axis positions if you're not in a print. There 
-; is a scroll button on the right to go to the "altMain" menu.
+; This is the menu when clicking the scroll right button from the main overview. (the "main" file)
+; It provides additional print settings, including the speed and extrusion multipliers,
+; as well as babystepping. The general layout is the same as the main screen.
+;
+;
+; Note: The top menu and bottom sections should always be exactly the same as the "main" file.
 
 
 
@@ -39,31 +39,24 @@ button W42 V6 T"Abort" A"menu confirmAbort"
 
 
 ; --------------- Main Overview ---------------
-; Note: this section may need modified if you use different heater and fan numbers.
 image R11 C0 L"imgs/hline.img"
 
-; Bed Temp
-image R14 C25 L"imgs/bed.img"
-alter R14 C40 N180 W20 H2
-text T" / "
-value N80 W20
-text T"°C"
+; Flowrate (Extrusion Multiplier)
+image R14 C40 L"imgs/flowrate.img"
+alter C65 F0 N400 W25 H2
 
-; Hotend Temp
-image R26 C25 L"imgs/temp.img"
-alter C40 N100 W20 H2
-text T" / "
-value N0 W20
-text T"°C"
+; Feedrate (Print Speed)
+image R26 C40 L"imgs/feedrate.img"
+alter C65 N500 W25 H2
 
-; Fan Speed
-image R38 C25 L"imgs/fan.img"
-alter C52 N301 W25 H1
-button C80 F0 T"OFF" A"M106 P1 S0"
+; Babystepping
+image R38 C40 L"imgs/zstep.img"
+alter C65 D2 N521 W25 H2
+text T" mm"
 
 
 ; --------------- Scroll Button ---------------
-button R25 C104 F1 T" » " A"menu altMain"
+button R25 C6 F1 T" « " A"return"
 
 
 ; --------------- Axis Positions ---------------
