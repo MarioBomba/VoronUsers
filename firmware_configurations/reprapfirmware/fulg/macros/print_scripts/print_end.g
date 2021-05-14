@@ -12,4 +12,4 @@ M106 S0                         ; shut off blower
 M84                             ; turn off motors
 
 ; stop bay cooling fan
-M106 P2 S0
+M106 P4 S0

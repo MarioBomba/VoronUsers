@@ -1,6 +1,3 @@
-; mesh.g
-; called before G29 is executed
-
 ; give one last chance to cancel...
 M291 P"This will replace the existing bed mesh. Are you sure?" R"Bed Mesh" S3
 
@@ -26,9 +23,6 @@ M561
 ; Establish final Z ref
 M291 P"Final Z ref..." R"Bed Mesh" T5
 G28 Z
-
-; Ensure Z is higher than inductive probe trigger height
-G1 Z5
 
 ; Get the reference Z offset
 M98 P"/macros/print_scripts/goto_bed_center.g"
