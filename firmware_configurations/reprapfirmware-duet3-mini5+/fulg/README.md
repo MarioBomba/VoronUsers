@@ -54,6 +54,5 @@ Final adjustments with the gantry mostly leveled:
 Heaters, temperature sensors and fans:
 - I use a dual thermistor bed setup (Keenovo built-in thermistor and a separate stud thermistor on the edge of the bed). You will need to adjust `M305` and `M307` to fit your setup for the bed heater in `/sys/config.g`. If you use a single-thermistor setup, don't forget to delete my 2nd thermistor bit (the `M305`, `M307` and `M143` commands for `H0` in the dual-thermistor section).
 - I use PT100 sensors for my hotends. If you use standard thermistors, you will need to adjust the `M305` for the hotend. Don't bother with `M307`, this will be set automatically later during PID tuning. I keep them there as a reference so I can swap between toolheads without having to re-do PID tuning, by copying them back into `/sys/config-override.g`.
-- Ignore the 2nd hotend heater. Stock VORONs do not support dual extrusion. I only keep this as a reference for testing.
-- Adjust the `M106` in `/sys/config.g` to match where you connected your fans. I use 12V fans connected to the Duex board, because my Duet is powered with 24V (so its fan pins are also 24V).
-- At this point you are ready for the PID tuning. Issue a `M303 H1 S240` from the DWC console. If you enabled PID for the bed, do that too now. When you are done, issue `M500` to save the results to `/sys/config-override.g`.
+- Adjust the `M106` in `/sys/config.g` to match where you connected your fans.
+- At this point you are ready for the PID tuning. Issue a `M303 T0 S240` from the DWC console. If you enabled PID for the bed (recommended!), do that too now (`M303 H0 S100`). When you are done, issue `M500` to save the results to `/sys/config-override.g`.
