@@ -11,9 +11,7 @@ M84 E0
 G28
 
 ; Lower currents, speed & accel
-M98 P"/macros/print_scripts/speed_probing.g"
-M98 P"/macros/print_scripts/z_current_low.g"
-M98 P"/macros/print_scripts/xy_current_low.g"
+M98 P"/macros/print_scripts/setup_probing.g"
 
 ; Probe the bed at 4 points, x3 for more precision
 M558 K0 H10 F1200 ; increase the depth range, gets the gantry mostly level immediately
@@ -30,6 +28,4 @@ while move.calibration.initial.deviation > 0.003
 echo "Leveling complete"
 
 ; Restore high currents, speed & accel
-M98 P"/macros/print_scripts/speed_printing.g"
-M98 P"/macros/print_scripts/xy_current_high.g"
-M98 P"/macros/print_scripts/z_current_high.g"
+M98 P"/macros/print_scripts/setup_printing.g"

@@ -2,6 +2,7 @@ if move.axes[1].userPosition > 275
   M291 P"Inductive probe outside of bed area, are you sure?" R"Warning" S3
 
 ; workaround for RRF bug where the probe offset is cumulatively applied (1/2)
+; https://github.com/Duet3D/RepRapFirmware/issues/494
 G31 K0 Y0
 
 G1 Z5 F3000

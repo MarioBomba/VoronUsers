@@ -50,7 +50,7 @@ M906 I30                        ; Idle current percentage
 M84 S120                        ; Idle timeout
 
 ; Accelerations and speed
-M98 P"/macros/print_scripts/speed_printing.g"
+M98 P"/macros/print_scripts/setup_printing.g"
 
 ; Axis travel limits
 M208 X-9 Y0 Z0 S1               ; Set axis minima

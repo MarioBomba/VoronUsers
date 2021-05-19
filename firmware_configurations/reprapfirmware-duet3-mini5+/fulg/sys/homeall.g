@@ -5,9 +5,7 @@
 G91
 
 ; Lower currents, speed & accel
-M98 P"/macros/print_scripts/xy_current_low.g"
-M98 P"/macros/print_scripts/z_current_low.g"
-M98 P"/macros/print_scripts/speed_probing.g"
+M98 P"/macros/print_scripts/setup_probing.g"
 
 ; Lift Z relative to current position if needed
 if !move.axes[2].homed
@@ -41,6 +39,4 @@ M98 P"/macros/print_scripts/goto_z_switch.g"
 G30 K1 Z-9999
 
 ; Restore high currents, speed & accel
-M98 P"/macros/print_scripts/xy_current_high.g"
-M98 P"/macros/print_scripts/z_current_high.g"
-M98 P"/macros/print_scripts/speed_printing.g"
+M98 P"/macros/print_scripts/setup_printing.g"
