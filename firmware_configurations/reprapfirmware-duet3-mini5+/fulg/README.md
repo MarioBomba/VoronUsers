@@ -1,6 +1,6 @@
 # What
 
-This is a (generally up-to-date) dump of my own VORON V2 printer, using the stock Duet firmware. I use a Duet Ethernet and a Duex5 add-on board, and a PanelDue touch screen.
+This is a (generally up-to-date) dump of my own VORON V2 printer, using the stock Duet firmware. I use a Duet3 Mini5+ Ethernet and a Mini2+ add-on board, and a Fysetc 12864 V2.1 LCD screen.
 
 You can see how I make my backups with the included batch file.
 
