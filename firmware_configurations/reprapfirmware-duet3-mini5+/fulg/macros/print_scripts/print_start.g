@@ -2,7 +2,7 @@ M83  ; set extruder to relative mode
 G21  ; set units to mm
 
 ; start bay cooling fan
-M106 P4 S.25
+M106 P2 S.25
 
 T0  ; select tool 0
 
