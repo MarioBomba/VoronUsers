@@ -35,6 +35,7 @@ like so:
 
 | Creator | Config title | Description | V0 | V1.8 | V2.4 | VSW |
 | --- | --- | --- | --- | --- | --- | --- |
-| fulg | [Duet 3 Mini5+ Config](./reprapfirmware/fulg) | RRF 3.3 example config | :x: | :x: | :heavy_check_mark: | :x: |
+| fulg | [Duet 2 Config](./reprapfirmware-duet2/fulg) | RRF 3.2 example config | :x: | :x: | :heavy_check_mark: | :x: |
+| fulg | [Duet 3 Mini5+ Config](./reprapfirmware-duet3-mini5+/fulg) | RRF 3.3 example config | :x: | :x: | :heavy_check_mark: | :x: |
 
 ---
