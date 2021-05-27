@@ -56,3 +56,6 @@ Heaters, temperature sensors and fans:
 - I use PT100 sensors for my hotends. If you use standard thermistors, you will need to adjust the `M305` for the hotend. Don't bother with `M307`, this will be set automatically later during PID tuning. I keep them there as a reference so I can swap between toolheads without having to re-do PID tuning, by copying them back into `/sys/config-override.g`.
 - Adjust the `M106` in `/sys/config.g` to match where you connected your fans.
 - At this point you are ready for the PID tuning. Issue a `M303 T0 S240` from the DWC console. If you enabled PID for the bed (recommended!), do that too now (`M303 H0 S100`). When you are done, issue `M500` to save the results to `/sys/config-override.g`.
+
+# Credits:
+- Uses the Duet Ultimate Menu System from https://github.com/jadonmmiller/UltimateDuetMenuSystem.
