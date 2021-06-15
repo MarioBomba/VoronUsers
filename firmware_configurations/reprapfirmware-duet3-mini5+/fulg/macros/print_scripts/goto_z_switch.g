@@ -5,4 +5,4 @@ if {move.axes[2].homed && (move.axes[2].userPosition < 5)}
   G90
 
 ; goto Z switch
-G1 X207.5 Y321.5 F6000
+G1 X208.2 Y320.0 F6000

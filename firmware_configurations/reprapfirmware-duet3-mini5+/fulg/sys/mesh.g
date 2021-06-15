@@ -23,6 +23,9 @@ G32
 ; ignore current heightmap
 M561
 
+; Wipe off any residue from the nozzle
+M98 P"/macros/print_scripts/do_nozzle_wipe.g"
+
 ; Establish final Z ref
 M291 P"Final Z ref..." R"Bed Mesh" T5
 G28 Z

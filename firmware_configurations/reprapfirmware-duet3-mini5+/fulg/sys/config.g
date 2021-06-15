@@ -65,7 +65,10 @@ M574 Z0 P"nil"                  ; No Z endstop
 M558 K0 P8 C"^io5.in" T18000 F120 H5 A5 S0.01 R0.2
 G31 K0 P500 X0 Y25 Z2.0             ; Don't really care about inductive probe Z offset
 M558 K1 P8 C"^io6.in" T18000 F240:60 H2 A10 S0.005 R0.2
-G31 K1 P500 X0 Y0 Z-0.07            ; Z switch offset (if positive, greater value = lower nozzle. if negative, more negative = higher nozzle)
+G31 K1 P500 X0 Y0 Z0.53            ; Z switch offset (if positive, greater value = lower nozzle. if negative, more negative = higher nozzle)
+
+; Energetic textured plate: Z0.48
+; TL textured plate: Z0.62
 
 ; Bed leveling
 M671 X-65:-65:365:365 Y0:395:395:0 S20      ; Define Z belts locations (Front_Left, Back_Left, Back_Right, Front_Right)
@@ -91,6 +94,8 @@ M143 H1 S350                                                ; Set temperature li
 M308 S3 Y"mcu-temp" A"MCU"
 M308 S4 Y"drivers" A"Drivers"
 ;M308 S5 Y"drivers-duex" A"Duex Drivers"
+
+M308 S6 P"spi.cs2" Y"rtd-max31865" F60 A"Z Switch"
 
 ; Todo: Chamber temperature sensor via io port (needs RRF3.3b1+)
 ;M308 S10 P"io4.out+io4.in" Y"dht21" A"Chamber Temp[C]"      ; Set DHT21 for chamber temp
