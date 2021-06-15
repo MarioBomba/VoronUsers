@@ -85,3 +85,6 @@ This one is required since RRF3.3b3 to fix the Layer Chart in DWC, without it RR
 ;LAYER:[layer_num]
 ;[layer_z]
 ```
+
+# Credits
+- Uses the Duet Ultimate Menu System from https://github.com/jadonmmiller/UltimateDuetMenuSystem.
